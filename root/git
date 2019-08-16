@@ -1,0 +1,8 @@
+# git的基本操作
+
+1. 初始化文件夹:
+git init
+2.  添加到那个仓库
+git remote add origin https://github.com/SoulEngineer-YuHaiming/study_note.git
+3. 更新本地和远程
+git push -u origin master
