@@ -1,0 +1,16 @@
+# 简介:
+
+HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer 或 Hypertext Transfer Protocol Secure，超文本传输安全协议），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。
+内置于其浏览器Netscape Navigator中，提供了身份验证与加密通讯方法
+# http和https的 区别
+HTTPS和HTTP的区别主要为以下四点：
+一、https协议需要到ca申请证书，一般免费证书很少，需要交费。
+二、http是超文本传输协议，信息是明文传输，https 则是具有安全性的ssl加密传输协议。
+三、http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。
+四、http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。
+
+# SSL的基本流程
+1）客户端向服务器发送一个开始信息“Hello”以便开始一个新的会话连接；</br>
+2）服务器根据客户的信息确定是否需要生成新的主密钥，如需要则服务器在响应客户的“Hello”信息时将包含生成主密钥所需的信息；</br>
+3）客户根据收到的服务器响应信息，产生一个主密钥，并用服务器的公开密钥加密后传给服务器；</br>
+4）服务器恢复该主密钥，并返回给客户一个用主密钥认证的信息，以此让客户认证服务器。</br>

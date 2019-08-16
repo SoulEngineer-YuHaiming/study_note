@@ -1,0 +1,35 @@
+## mvc 模式的组成和介绍:
+- 模型：封装应用程序的数据和业务逻辑
+- 视图：实现应用程序的信息显示功能
+- 控制器：接收来自用户的输入，调用模型层，响应对应的视图组件
+
+## servlet 和 filter 的 区别
+
+- Servlet 能做的 Filter 是否都可以完成 ? 嗯。
+- Filter 能做的 Servlet 都可以完成吗 ?
+ 拦截资源却不是 Servlet 所擅长的!
+ Filter 中有一个 FilterChain，
+ 这个 API 在 Servlet 中没有！
+
+ ## struts2 的介绍
+ Struts2 是一个用来开发 MVC 应用程序的框架. 它提供了 Web 应用程序开发过程中的一些常见问题的解决方案:
+- 对来自用户的输入数据进行合法性验证
+- 统一的布局
+- 可扩展性
+- 国际化和本地化
+- 支持 Ajax
+- 表单的重复提交
+- 文件的上传下载
+…..
+## struts1 和 struts2的区别
+- 在体系结构方面更优秀:
+- 类更少, 更高效:
+-   在 Struts2 中无需使用 “ActionForm” 来封装请求参数.
+扩展更容易:
+-   Struts2 通过拦截器完成了框架的大部分工作. 在 Struts2 中插入一个拦截器对象相当简便易行.
+更容易测试:
+- 即使不使用浏览器也可以对基于 Struts2 的应用进行测试
+## 搭建  struts2的 开发环境
+- 加入 jar 包: 复制 struts\apps\struts2-blank\WEB-INF\lib 下的所有 jar 包到当前 web 应用的 lib 目录下.
+- 在 web.xml 文件中配置 struts2: 复制 struts\apps\struts2-blank1\WEB-INF\web.xml 文件中的过滤器的配置到当前 web 应用的 web.xml 文件中
+- 在当前 web 应用的 classpath 下添加 struts2 的配置文件 struts.xml: 复制 struts1\apps\struts2-blank\WEB-INF\classes 下的 struts.xml 文件到当前 web 应用的 src 目录下.
