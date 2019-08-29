@@ -1,0 +1,37 @@
+- #### redis的数据类型:
+String,hash,list,Set
+
+- ### String的使用:
+ ```
+    声明变量:set name "zhangs"
+    取出变量: get name
+    删除变量: del name
+    批量操作: mset s1 "s1" s2 "s2" s3 "s3"
+ ```
+- #### hash的 使用
+```
+  声明类型: hmset name s1 "zs" s2 "lis"
+  取出: hget name s1
+  批量操作: hmset 批量插入
+  批量查看: hmget
+  查看key: hkeys
+  查看val: hvals
+  长度: hlen
+  查看元素是否存在: hexists
+```
+- #### list的使用
+```
+声明: lpush s1 redis,s2 mgoDb
+取出: lrange s1 0 -1
+取出 最右边: rpop s1
+取出最左边: lpop s1
+长度 : llen s1
+```
+- #### set的使用
+增加 : sadd set a b c 1 2 3
+查看 : smembers  set
+删除 : srem set  a
+判断是否存在: sismember set  a
+计算并集: sunion
+计算交集 : sinter
+计算 差集: sdiff seta setb # 使用 sdiff 计算 seta - setb (属于seta 但不属于 setb)
